@@ -1,0 +1,160 @@
+.cardgrid{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: max-content;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card{
+    display: inline-block;
+    width: 46%;
+    height: 550px;
+    padding: 0;
+    margin: 2%;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+    transition: 0.25s;
+}
+
+.card:hover{
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+}
+
+.thumbnail{
+    height: 48%;
+    width: 100%;
+    border-radius: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.card .thumbnail .shadowBg{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    background-color: #000000aa;
+    transition: 0.25s;
+}
+
+.card .thumbnail .shadowBg .more{
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.card .thumbnail .shadowBg .more:hover{
+    transform: scale(1.05);
+}
+
+.card .content, .modal .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 44%;
+    width: 92%;
+    padding: 4%;
+    cursor: default;
+}
+
+.icon{
+    height: 14px;
+}
+
+.card .title, .modal .title{
+    cursor: pointer;
+    font-family: 'Lato';
+}
+
+
+.card .about, .modal .about{
+    color: #8f8f8f;
+    font-family: 'Lato';
+}
+
+.card .card-footer{
+    display: flex;
+    color: #8f8f8f;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal{
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    position: absolute;
+    height: 74%;
+    width: 36%;
+    top: 13%;
+    left: 32%;
+    right: auto;
+    bottom: auto;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 3px;
+}
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000aa;
+}
+
+.modal .close{
+    display: flex;
+    height: 3%;
+    padding: 3%;
+    width: 94%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.modal .close .icon{
+    cursor: pointer;
+    opacity: 0.4;
+    transition: 0.25s;
+}
+
+.modal .close .icon:hover{
+    opacity: 1;
+}
+
+.modal .thumbnail{
+    height: 57%;
+}
+
+.modal .content{
+    height: 40%;
+}
+
+.modal .content .author{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Lato';
+    color: #8f8f8f;
+}
+
+.avatar{
+    height: 60px;
+    border-radius: 30px;
+    margin-right: 20px;
+}
