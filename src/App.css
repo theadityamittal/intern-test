@@ -2,6 +2,12 @@ html, body{
   height: 100%;
   margin: 0;
   padding: 0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+html::-webkit-scrollbar{
+  display: none;
 }
 
 #root{
@@ -9,8 +15,15 @@ html, body{
 }
 
 .container{
-  width: 1200px;
+  width: 80%;
   height: 100%;
   margin: 0 auto;
   font-family: 'Lato';
+  transition: 0.25s;
+}
+
+@media screen and (max-width: 1100px) {
+  .container{
+    width: 90%;
+  }  
 }

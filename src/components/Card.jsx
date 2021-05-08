@@ -53,6 +53,7 @@ export default function Card({ data }) {
           onRequestClose={closeModal}
           className='modal'
           overlayClassName='modal-overlay'
+          bodyOpenClassName='modal-body'
           contentLabel="Example Modal"
         >
           <section className='close'>

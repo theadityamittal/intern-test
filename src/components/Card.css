@@ -73,18 +73,18 @@
     height: 14px;
 }
 
-.card .title, .modal .title{
+.card .content .title, .modal .title{
     cursor: pointer;
     font-family: 'Lato';
 }
 
 
-.card .about, .modal .about{
+.card .content .about, .modal .about{
     color: #8f8f8f;
     font-family: 'Lato';
 }
 
-.card .card-footer{
+.card .content .card-footer{
     display: flex;
     color: #8f8f8f;
     width: 100%;
@@ -93,20 +93,31 @@
     align-items: center;
 }
 
+.modal-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .modal{
     display: flex;
-    overflow: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     flex-direction: column;
     position: absolute;
     height: 74%;
     width: 36%;
     top: 13%;
     left: 32%;
-    right: auto;
-    bottom: auto;
+    right: 32%;
+    bottom: 13%;
     background-color: #ffffff;
-    border: none;
-    border-radius: 3px;
+    transition: 0.25s;
+}
+
+.modal::-webkit-scrollbar{
+    display: none;
 }
 
 .modal-overlay{
@@ -157,4 +168,64 @@
     height: 60px;
     border-radius: 30px;
     margin-right: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+    .modal .content{
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .card .content .title{
+        font-size: 80%;
+    }
+
+    .card .content .about, .card .content .card-footer{
+        font-size: 90%;
+    }
+
+    .modal{
+        width: 50%;
+        left: 25%;
+        right: 25%;
+    }
+
+    .avatar{
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .card {
+        width: 70%;
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .modal{
+        width: 70%;
+        left: 15%;
+        right: 15%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .card{
+        height: 450px;
+    }
+    .card .content{
+        font-size: 85%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        height: 400px;
+    }
 }
