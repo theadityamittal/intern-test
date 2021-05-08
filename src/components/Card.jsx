@@ -37,7 +37,7 @@ export default function Card({ data }) {
         </section>
         <section className='content'>
             <div className='title' onClick={openModal}>
-                <span><img className='icon' src={blue}/><img className='icon' src={yellow}/></span>
+                <span><img className='icon' alt="bluedot" src={blue}/><img className='icon' alt="yellowdot" src={yellow}/></span>
                 <h2>{data.title}</h2>
             </div>
             <div className='about'>
@@ -67,7 +67,7 @@ export default function Card({ data }) {
               <p>{data.content}</p>
             </div>
             <div className="author">
-              <img className="avatar" src={data.author.avatar}/>
+              <img className="avatar" alt={data.author.name} src={data.author.avatar}/>
               <p>{`${data.author.name} - ${data.author.role}`}</p>
             </div>
           </section>
